@@ -1,0 +1,411 @@
+
+ body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ }
+
+ .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+ }
+
+ /* Üst Bilgi (Header) Stili */
+ header {
+  background-color: #1e2048;
+  color: #fff;
+  padding: 20px 0;
+ }
+
+ header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ header .logo {
+  display: flex;
+  align-items: center;
+ }
+
+ header .logo img {
+  height: 100px; /* index.html'deki değerle aynı */
+  margin-right: 40px; /* index.html'deki değerle aynıysa */
+ }
+
+ header .logo h1 {
+  margin: 0;
+  font-size: 1.7em;
+ }
+
+ header .header-sag {
+  display: flex;
+  align-items: center;
+ }
+
+ header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+ }
+
+ header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+ }
+
+ header nav a:hover {
+  background-color: #1e2048;
+  border-radius: 5px;
+ }
+
+ header .arama-cubugu {
+  display: flex;
+  margin-left: 20px;
+ }
+
+ header .arama-cubugu input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1em;
+ }
+
+ header .arama-cubugu button[type="submit"] {
+  background-color: #7275aa;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+ }
+
+ header .arama-cubugu button[type="submit"]:hover {
+  background-color: #7275aa;
+ }
+
+ /* Ana İçerik (Main) Stili */
+ main {
+  padding: 40px 0;
+ }
+
+ section {
+  margin-bottom: 50px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+
+ h2 {
+  color: #090a0a;
+  font-size: 2.8em;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #00897b;
+  padding-bottom: 15px;
+  font-weight: 500;
+ }
+
+ h3 {
+  color: #37474f;
+  font-size: 2em;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-weight: 500;
+ }
+
+ ul {
+  list-style-type: none;
+  padding-left: 0;
+ }
+
+ ul li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+ }
+
+ ul li::before {
+  content: "\2022";
+  color: #00897b;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 1.4em;
+ }
+
+ ul li ul {
+  margin-top: 10px;
+  padding-left: 20px;
+ }
+
+ ul li ul li::before {
+  content: "-";
+  color: #777;
+  top: 4px;
+ }
+
+ a {
+  color: #00897b;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+ }
+
+ a:hover {
+  color: #00695c;
+  text-decoration: underline;
+ }
+
+ /* Açılır Menü Stilleri */
+ .dropdown {
+  position: relative;
+ }
+
+ .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #37474f;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  display: none;
+ }
+
+ .dropdown:hover .dropdown-menu {
+  display: block;
+ }
+
+ .dropdown-menu li a {
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  color: #eceff1;
+  transition: background-color 0.3s ease-in-out;
+ }
+
+ .dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+ }
+
+ /* Kaydırıcı (Swiper) Stilleri */
+ .swiper-container {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+
+ .swiper-slide {
+  background-size: cover;
+  background-position: center;
+ }
+
+ .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000000;
+  opacity: 0.8;
+  margin: 0 5px;
+ }
+
+ .swiper-pagination-bullet-active {
+  background: #00897b;
+  opacity: 1;
+ }
+
+ .swiper-button-prev,
+ .swiper-button-next {
+  color: #eee;
+ }
+
+ .swiper-button-prev:after,
+ .swiper-button-next:after {
+  font-size: 1.5em;
+  font-weight: bold;
+ }
+
+ /* Harita Konumu Stilleri */
+ .map-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+ }
+
+ .map-container {
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+ }
+
+ /* Alt Bilgi (Footer) Stili */
+ footer {
+  background-color: #1e2048;
+  color: #eceff1;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9em;
+  margin-top: 60px;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12), 0 -1px 2px rgba(0, 0, 0, 0.24);
+ }
+
+ footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ footer .iletisim p {
+  margin: 8px 0;
+ }
+ .ogrenci-banner {
+    background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"); /* Örnek arka plan */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .ogrenci-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 32, 72, 0.6);
+    border-radius: 8px;
+    z-index: 0;
+  }
+  
+  .ogrenci-banner h2,
+  .ogrenci-banner p {
+    position: relative;
+    z-index: 1;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  /* Mevcut .news-card stiliniz (transition eklendi) */
+.news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* Efektlerin yumuşak geçiş yapması için transition ekle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover'da değişecek özelliklere transition ekle */
+    cursor: pointer; /* Farenin el işareti olması için */
+}
+
+.news-card:hover {
+    /* Kartı hafifçe yukarı kaldır */
+    transform: translateY(-5px);
+    /* Gölgeyi daha belirgin hale getir */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Arka plan rengini hafifçe değiştirebilirsiniz (isteğe bağlı) */
+    /* background-color: #f0f0f0; */
+    /* Kenarlık ekleyebilirsiniz (isteğe bağlı) */
+    /* border: 1px solid #3498db; */
+}
+
+/* Haber kartı içindeki linkin de hover efekti olsun isterseniz (isteğe bağlı) */
+.news-card a:hover {
+    color: #e67e22; /* CTA rengi gibi farklı bir renk */
+    text-decoration: underline;
+}/* Mevcut .feature-card stiliniz (transition ve cursor eklendi) */
+.feature-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    /* Efektlerin yumuşak geçiş yapması için transition ekle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover'da değişecek özelliklere transition ekle */
+    cursor: pointer; /* Farenin el işareti olması için */
+}
+
+/* .feature-card üzerine gelindiğinde (hover olduğunda) uygulanacak stiller */
+.feature-card:hover {
+    /* Kartı hafifçe yukarı kaldır (veya sadece gölgeyi değiştirebilirsiniz) */
+    transform: translateY(-5px);
+    /* Gölgeyi daha belirgin hale getir */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Gölge biraz daha büyük ve belirgin olabilir */
+    /* İsteğe bağlı: Kenarlık veya arka plan rengi değişimi */
+    /* border: 1px solid #1e2048; */
+    /* background-color: #f8f8f8; */
+}
+
+/* Feature card içindeki resmin üzerine gelindiğinde (isteğe bağlı efekt) */
+.feature-card img:hover {
+    opacity: 0.9; /* Hafif şeffaflık */
+    transform: scale(1.05); /* Biraz büyütme */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Feature card içindeki başlığın (h3) üzerine gelindiğinde (isteğe bağlı efekt) */
+.feature-card h3:hover {
+    color: #3498db; /* Renk değişimi */
+    transition: color 0.3s ease;
+}
+.obs-button {
+  background-color: #1f3c88;         /* Lacivert ton */
+  color: white;                      /* Beyaz yazı */
+  padding: 10px 18px;                /* İç boşluk */
+  border: none;                      /* Kenarlık yok */
+  border-radius: 6px;                /* Köşeler yuvarlak */
+  font-size: 15px;                   /* Yazı boyutu */
+  font-weight: 500;                  /* Yarı kalın yazı */
+  text-decoration: none;            /* Alt çizgi yok */
+  transition: 0.3s ease;            /* Yumuşak geçiş */
+}
+
+.obs-button:hover {
+  background-color: #3c5ccf;        /* Hover rengi */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Hafif gölge efekti */
+  transform: scale(1.05);           /* Üzerine gelince biraz büyüme */
+}
