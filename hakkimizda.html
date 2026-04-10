@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakkımızda | Savunma Sanayi ve Hava Teknolojileri Üniversitesi</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Genel stiller (header için) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+/* Hakkımızda Sayfası Özel CSS */
+main {
+    padding: 20px 0;
+}
+
+h2 {
+    color: #fff; /* Başlık rengini beyaz yapalım */
+    background-image: url('https://images.pexels.com/photos/2765140/pexels-photo-2765140.jpeg'); /* Hakkımızda başlığı için arka plan resmi */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0; /* Başlık etrafında biraz boşluk bırakalım */
+    text-align: center;
+}
+
+h3 {
+    color: #1e2048; /* Koyu mavi başlıklar */
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #1e2048;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .iletisim {
+    text-align: right;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="images/sshtu-logo.jpeg" alt="Üniversite Logosu"></a>
+            <h1>Savunma Sanayi ve Hava Teknolojileri Üniversitesi</h1>
+        </div>
+        <div class="header-sag">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li class="current"><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="akademik.html">Akademik</a></li>
+                    <li><a href="ogrenci.html">Öğrenci</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="arama-cubugu">
+                <form action="/arama-sonuclari" method="get">
+                    <input type="text" placeholder="Sitede Ara..." name="q">
+                    <button type="submit">Ara</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section>
+        <h2>Hakkımızda</h2>
+        <p>Savunma Sanayi ve Hava Teknolojileri Üniversitesi, Türkiye'nin savunma sanayi ve havacılık alanındaki nitelikli personel ihtiyacını karşılamak amacıyla kurulmuştur. Üniversitemiz, öğrencilerine teorik bilginin yanı sıra pratik uygulama imkanları sunarak sektörün öncüleri arasında yer almalarını hedeflemektedir.</p>
+
+        <h3>Misyonumuz</h3>
+        <p>Misyonumuz, savunma sanayi ve hava teknolojileri alanında yenilikçi, araştırmacı ve etik değerlere sahip bireyler yetiştirmek, bilimsel ve teknolojik gelişmelere katkıda bulunmak ve sektörle işbirliği içinde ülkenin kalkınmasına destek olmaktır.</p>
+
+        <h3>Vizyonumuz</h3>
+        <p>Vizyonumuz, savunma sanayi ve hava teknolojileri alanında ulusal ve uluslararası düzeyde tanınan, öncü bir eğitim ve araştırma kurumu olmaktır.</p>
+
+        <h3>Değerlerimiz</h3>
+        <ul>
+            <li>Bilimsellik ve Araştırmacılık</li>
+            <li>Yenilikçilik ve Girişimcilik</li>
+            <li>Etik Değerlere Bağlılık</li>
+            <li>Kalite ve Mükemmeliyet</li>
+            <li>İşbirliği ve Paydaş Katılımı</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Savunma Sanayi ve Hava Teknolojileri Üniversitesi. Tüm Hakları Saklıdır.</p>
+        <div class="iletisim">
+            <p>Adres: Üniversite Kampüsü, [Şehir]</p>
+            <p>E-posta: info@sshtu.edu.tr</p>
+            <p>Telefon: +90 XXX XXX XX XX</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
