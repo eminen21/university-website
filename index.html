@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savunma Sanayi ve Hava Teknolojileri Üniversitesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
+    <style>
+        /* Genel stiller */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            max-width: 1200px;
+        }
+
+        /* Header Stilleri */
+        header {
+            background-color: #1e2048;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 100px;
+            margin-right: 40px;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 1.7em;
+        }
+
+        header .header-sag {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 10px;
+            display: block;
+        }
+
+        header nav a:hover {
+            background-color: #1e2048; /* Aynı renk, belki hover için farklı bir renk istersiniz? #2c306b gibi */
+            border-radius: 5px;
+        }
+
+        header .arama-cubugu {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        header .arama-cubugu input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1em;
+        }
+
+        header .arama-cubugu button[type="submit"] {
+            background-color: #7275aa;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        header .arama-cubugu button[type="submit"]:hover {
+            background-color: #5a5d9a; /* Hafif koyu bir hover rengi */
+        }
+        /* Swiper Stilleri */
+.main-slider {
+    width: 100%;
+    height: 500px; /* Yüksekliği artırdım, isteğe bağlı */
+    margin-bottom: 30px;
+    background-color: #ddd; /* Resimler yüklenene kadar arka plan */
+    position: relative; /* Navigasyon butonlarının doğru konumlanması için */
+    overflow: hidden; /* Swiper dışına taşan içeriği gizle */
+}
+
+/* Her bir swiper-slide için stil */
+.swiper-slide {
+    /* Slayt içeriği için flexbox veya grid kullanılabilir */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Eğer resim üzerine yazı eklenecekse */
+    font-size: 24px;
+
+    /* Arka plan resmi için stiller */
+    background-size: cover; /* Görseli tam olarak kaplaması için */
+    background-position: center; /* Görselin ortalanması */
+    height: 100%; /* Yükseklik, ihtiyaca göre ayarlanabilir */
+    min-height: 400px; /* Minimum yükseklik */
+}
+
+/* Görsellerin tam ekran kaplaması için (Eğer img etiketi kullansaydınız geçerli olacaktı) */
+/* Şu an background-image kullandığınız için bu kurallar geçerli değil, ama img kullanırsanız lazım olur */
+/*
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+*/
+
+
+/* Swiper navigasyon ve pagination renklerini ana temaya uygun hale getirelim */
+/* Bu stiller Swiper'ın kendi CSS'inden sonra gelmeli veya onu ezmelidir */
+.swiper-button-next, .swiper-button-prev {
+    color: #1e2048 !important; /* Ana tema rengi, !important gerekebilir */
+    background-color: rgba(255, 255, 255, 0.5); /* Butonları biraz şeffaf yapalım */
+    border-radius: 50%; /* Butonları yuvarlak yapalım */
+    padding: 10px; /* Buton boyutunu büyütelim */
+    width: 40px !important; /* Genişliği sabit ayarlayalım */
+    height: 40px !important; /* Yüksekliği sabit ayarlayalım */
+    margin-top: -20px !important; /* Dikeyde ortalamak için */
+    z-index: 10; /* Butonların resimlerin önünde olmasını sağlamak için */
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Hover durumunda daha belirgin hale gelsin */
+}
+
+/* Swiper navigasyon ikon renkleri (Swiper v7+ için SVG kullanılır) */
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px !important; /* İkon boyutunu ayarla */
+}
+
+
+.swiper-pagination {
+    bottom: 10px; /* Sayfalama alt kısımda yer alacak şekilde */
+    text-align: center; /* Noktaları ortala */
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff !important; /* Sayfalama noktalarının rengi */
+    opacity: 1 !important; /* Opaklığı tam yap */
+}
+
+.swiper-pagination-bullet-active {
+    background: #1e2048 !important; /* Aktif sayfalama noktasının rengi */
+}
+
+/* Sayfalama bullets üzerine hover efekti */
+.swiper-pagination-bullet:hover {
+    background-color: #3498db !important; /* Hover rengi */
+}
+
+
+        .yatay-takvim-container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto; /* Sağa ve sola otomatik marjin ile ortala */
+            text-align: center; /* İçindeki başlığı ortala */
+            overflow-x: auto; /* Eğer takvim çok geniş olursa yatay kaydırma çubuğu çıksın */
+        }
+
+        .yatay-takvim-baslik {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1e2048;
+        }
+
+        .yatay-takvim-gunler {
+            display: flex;
+            flex-direction: column; /* Günleri alt alta sırala (satırlar için) */
+            gap: 5px; /* Satırlar arası boşluk */
+            align-items: center; /* Satırları kendi içinde ortala (gerekirse) */
+        }
+
+        .yatay-takvim-gunler > div { /* Her bir satır için flex container */
+            display: flex;
+            gap: 10px;
+            justify-content: center; /* Günleri satır içinde ortala */
+        }
+
+        .yatay-takvim-gun {
+            padding: 10px 5px; /* Padding ayarlandı */
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: #333;
+            background-color: #f9f9f9;
+            min-width: 45px; /* Minimum genişlik artırıldı */
+            flex: 1; /* Kutuların eşit genişlikte olmasını sağlamaya yardımcı olabilir */
+            display: flex; /* İçeriği düzenlemek için flex kullan */
+            flex-direction: column; /* Sayı ve günü alt alta al */
+            align-items: center; /* İçeriği ortala */
+            justify-content: center;
+        }
+
+        .yatay-takvim-gun span { /* Gün adı için stil */
+             display: block; /* Alt satıra insin */
+             font-size: 0.8em;
+             color: #777;
+             margin-top: 3px; /* Sayı ile gün adı arasına boşluk */
+        }
+
+
+        .yatay-takvim-gun.bugun {
+            background-color: #3498db;
+            color: #fff;
+            border-color: #3498db;
+        }
+
+         .yatay-takvim-gun.bugun span {
+             color: rgba(255, 255, 255, 0.8); /* Bugünün gün adını daha açık renk yap */
+         }
+
+
+        .yatay-takvim-gun.bos-dolgu {
+             /* Kullanılmıyor gibi görünüyor, gerekirse tanımlanabilir */
+        }
+
+
+        /* Hero Stilleri */
+        /* Slider eklediğiniz için bu kısım artık bir "Hero" slider'ın kendisi oldu. */
+        /* Alttaki .hero section'ı muhtemelen kaldırabilir veya farklı bir amaçla kullanabilirsiniz. */
+        /* Ben aşağıdaki .hero kısmını gizledim veya kaldırdım kabul ederek devam ediyorum. */
+        /* Eğer hem slider hem de statik hero olacaksa CSS ve HTML'i yeniden düzenlemek gerekir. */
+
+
+        /* Diğer stiller (featured-sections, cta-section, news-section, footer) aynı kalabilir */
+        .featured-sections {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+
+        .featured-sections .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .feature-card img {
+            max-width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #1e2048;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #555; /* Daha okunabilir renk */
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background-color: #1e2048;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section .button {
+            display: inline-block;
+            background-color: #e67e22;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section .button:hover {
+            background-color: #d35400;
+        }
+
+        .news-section {
+            padding: 40px 0;
+        }
+
+        .news-section h2 {
+            color: #1e2048;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* minmax(300px, 1fr) de olabilir */
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .news-card h4 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .news-card p {
+            color: #555; /* Daha okunabilir renk */
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .news-card a {
+            color: #1e2048;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .news-card a:hover {
+            color: #3498db;
+        }
+
+        /* Footer stilleri */
+        footer {
+            background-color: #1e2048;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+        footer .iletisim p {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img class="logo-img" src="images/sshtu-logo.jpeg" alt="Üniversite Logosu"></a>
+                <h1>Savunma Sanayi ve Hava Teknolojileri Üniversitesi</h1>
+            </div>
+            <div class="header-sag">
+                <nav>
+                    <ul>
+                        <li class="current"><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="akademik.html">Akademik</a></li>
+                        <li><a href="ogrenci.html">Öğrenci</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                         <li><a href="obs.html" >OBS Giriş</a></li>
+                    </ul>
+                </nav>
+                <div class="arama-cubugu">
+                    <form action="/arama-sonuclari" method="get">
+                        <input type="text" placeholder="Sitede Ara..." name="q">
+                        <button type="submit">Ara</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('images/slayt-resmi-1.jpg');">
+                 <h2>Savunma Sanayi Teknolojileri</h2>
+             </div>
+            <div class="swiper-slide" style="background-image: url('images/slayt-resmi-2.jpg');">
+                 <h2>Havacılık ve Uzay</h2>
+             </div>
+            <div class="swiper-slide" style="background-image: url('images/slayt-resmi-3.jpg');">
+                 <h2>Yenilikçi Araştırmalar</h2>
+             </div>
+            </div>
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        </div>
+
+    <div id="swup" class="transition-main">
+        <main>
+            <section class="hero">
+                 <div class="hero-overlay">
+                     <h2>Geleceğin Teknolojilerine Yön Verin</h2>
+                     <p>Savunma Sanayi ve Hava Teknolojileri Üniversitesi olarak, öğrencilerimizi geleceğin liderleri ve yenilikçileri olarak yetiştiriyoruz.</p>
+                     <a href="basvurular.html" class="button">Hemen Başvurun</a>
+                 </div>
+             </section>
+
+            <section class="featured-sections">
+                <div class="container">
+                    <div class="feature-card">
+                        <img src="images/akademik.jpg" alt="Akademik Mükemmellik">
+                        <h3>Akademik Mükemmellik</h3>
+                        <p>Uluslararası standartlarda eğitim ve deneyimli öğretim kadrosu ile geleceğe hazırlanın.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="images/research.png" alt="Araştırma Odaklı">
+                        <h3>Araştırma Odaklı</h3>
+                        <p>Savunma sanayi ve hava teknolojileri alanında öncü araştırmalara katılın.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="images/student.png" alt="Öğrenci Yaşamı">
+                        <h3>Zengin Öğrenci Yaşamı</h3>
+                        <p>Çeşitli öğrenci kulüpleri, etkinlikler ve modern kampüs olanakları ile öğrenci hayatının tadını çıkarın.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <h2>Keşfedin, Öğrenin, Gelişin</h2>
+                <a href="akademik.html" class="button">Akademik Programlarımızı İnceleyin</a>
+            </section>
+
+            <section class="news-section">
+                <div class="container news-grid"> <h2>Son Haberler ve Duyurular</h2>
+                    <div class="news-card">
+                        <h4>Yeni Laboratuvarımızın Açılışı</h4>
+                        <p>Üniversitemiz bünyesinde kurulan son teknoloji laboratuvarımız hizmete açılmıştır. Öğrencilerimiz en modern ekipmanlarla çalışma fırsatı bulacaklardır.</p>
+                        <a href="#">Devamını Oku</a>
+                    </div>
+                    <div class="news-card">
+                        <h4>Savunma Sanayi Zirvesine Katılım</h4>
+                        <p>Öğretim üyelerimiz ve öğrencilerimiz, uluslararası Savunma Sanayi Zirvesi'nde üniversitemizi başarıyla temsil ettiler.</p>
+                        <a href="#">Devamını Oku</a>
+                    </div>
+                    <div class="news-card">
+                        <h4>Öğrenci Proje Yarışması Sonuçlandı</h4>
+                        <p>Geleneksel öğrenci proje yarışmamızın kazananları belli oldu. Birbirinden başarılı projeler ödüle layık görüldü.</p>
+                        <a href="#">Devamını Oku</a>
+                    </div>
+                </div>
+            </section>
+
+             <div class="yatay-takvim-container">
+                 <div class="yatay-takvim-baslik" id="yatay-takvim-baslik"></div>
+                 <div class="yatay-takvim-gunler" id="yatay-takvim-gunler"></div>
+             </div>
+        </main>
+
+        <footer>
+            <div class="container">
+              <p>&copy; 2025 Savunma Sanayi ve Hava Teknolojileri Üniversitesi. Tüm Hakları Saklıdır.</p>
+              <div class="iletisim">
+                <p>Adres: Üniversite Kampüsü, [Şehir]</p>
+                <p>E-posta: info@sshtu.edu.tr</p>
+                <p>Telefon: +90 536 364 43 34</p>
+              </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.main-slider', {
+            direction: 'horizontal', // Yatay kaydırma
+            loop: true, // Sonsuz döngü
+            autoplay: {
+                delay: 5000, // 5 saniyede bir değişir
+                disableOnInteraction: false, // Kullanıcı etkileşiminden sonra durmasın
+            },
+
+            // Pagination (sayfalama noktaları)
+            pagination: {
+                el: '.swiper-pagination', // Sayfalama elementinin referansı
+                clickable: true, // Noktalara tıklanabilir
+                type: 'bullets', // Sayfalama tipi
+                dynamicBullets: true, // Dinamik bullet'lar, aktif olanı vurgular
+            },
+
+            // Navigation arrows (navigasyon okları)
+            navigation: {
+                nextEl: '.swiper-button-next', // Sonraki butonunun referansı
+                prevEl: '.swiper-button-prev', // Önceki butonunun referansı
+            },
+
+            // Swiper'ın görünümünü güzelleştirmek için bazı ekstra ayarlar
+            speed: 600, // Geçiş hızı (ms cinsinden)
+            effect: 'slide', // Efekt türü (diğer seçenekler: 'fade', 'cube', 'coverflow')
+            keyboard: {
+                enabled: true, // Klavye ile kaydırmayı aktif et
+                onlyInViewport: true, // Sadece görünüme giren alanlarda geçerli
+            },
+            mousewheel: {
+                invert: false, // Ters kaydırmayı devre dışı bırak
+                sensitivity: 1, // Hassasiyet ayarı
+            },
+        });
+
+         // yatayTakvimOlustur fonksiyonunu da DOMContentLoaded içine alabiliriz
+         yatayTakvimOlustur();
+
+      });
+
+      // Yatay Takvim Oluşturma Fonksiyonu
+      function yatayTakvimOlustur() {
+          const takvimBaslik = document.getElementById('yatay-takvim-baslik');
+          const takvimGunler = document.getElementById('yatay-takvim-gunler');
+          if (!takvimBaslik || !takvimGunler) return; // Elementler yoksa fonksiyonu durdur
+
+          const bugun = new Date();
+          const yil = bugun.getFullYear();
+          const ay = bugun.getMonth();
+          const gun = bugun.getDate();
+
+          const ayIsimleri = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+          const gunIsimleriKisa = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
+
+          takvimBaslik.textContent = `${ayIsimleri[ay]} ${yil}`;
+          takvimGunler.innerHTML = ''; // Takvimi temizle
+
+          const ilkGun = new Date(yil, ay, 1);
+          const sonGun = new Date(yil, ay + 1, 0);
+          const toplamGunSayisi = sonGun.getDate();
+          // Takvimi 3 satıra bölmek için her satırdaki gün sayısını hesapla
+          const gunSayisiSatirBasina = Math.ceil(toplamGunSayisi / 3);
+
+          let mevcutSatir;
+          let gunSayaci = 0; // Toplam gün sayacı
+          let satirIndex = 0; // Satır indexi
+
+          for (let i = 1; i <= toplamGunSayisi; i++) {
+              // Yeni bir satır başlamalıysa veya ilk gün ise
+              if (gunSayaci % gunSayisiSatirBasina === 0 || gunSayaci === 0) {
+                  if (satirIndex < 3) { // Maksimum 3 satır ile sınırla
+                       mevcutSatir = document.createElement('div');
+                       mevcutSatir.style.display = 'flex';
+                       mevcutSatir.style.gap = '10px';
+                       mevcutSatir.style.marginBottom = '5px';
+                       mevcutSatir.style.justifyContent = 'center'; // Günleri satır içinde ortala
+                       takvimGunler.appendChild(mevcutSatir);
+                       satirIndex++;
+                  } else {
+                      break; // 3 satıra ulaşıldı, döngüyü kır
+                  }
+              }
+
+              const gunDiv = document.createElement('div');
+              gunDiv.classList.add('yatay-takvim-gun');
+
+              const gunNumarasiSpan = document.createElement('span');
+              gunNumarasiSpan.textContent = i;
+              gunNumarasiSpan.style.fontWeight = 'bold'; // Gün numarasını kalın yap
+              gunDiv.appendChild(gunNumarasiSpan);
+
+
+              const haftaninGunu = new Date(yil, ay, i).getDay();
+              const gunAdiSpan = document.createElement('span');
+              gunAdiSpan.textContent = gunIsimleriKisa[haftaninGunu];
+              // Stil zaten .yatay-takvim-gun span olarak CSS'te var.
+
+              gunDiv.appendChild(gunAdiSpan);
+
+              if (i === gun && ay === bugun.getMonth() && yil === bugun.getFullYear()) {
+                  gunDiv.classList.add('bugun');
+              }
+
+              // Mevcut satıra günü ekle
+              if (mevcutSatir) {
+                  mevcutSatir.appendChild(gunDiv);
+              }
+              gunSayaci++;
+          }
+
+          // Son satırın eşit sayıda kutuya sahip olması için gerekirse boşluk ekleme (isteğe bağlı)
+          // Bu kısım, günSayisiSatirBasina hesaplaması ve 3 satır limiti ile karmaşık olabilir.
+          // Basitçe bırakıyorum, CSS'teki flexbox ile kendini ayarlayacaktır.
+
+      }
+
+      // Sayfa yüklendiğinde hem Swiper'ı başlat hem de takvimi oluştur
+      // Swiper başlatma zaten DOMContentLoaded içinde, takvimi de oraya taşıdım.
+
+    </script>
+</body>
+</html>
