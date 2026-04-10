@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+ <html lang="tr">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akademik | SSHTÜ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  }
+
+  /* Header Stilleri (AYNI) */
+  header {
+  background-color: #1e2048; /* Koyu mavi */
+  color: #fff;
+  padding: 20px 0;
+  }
+
+  header .container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  display: flex; /* Logo ve header-sag'ı yan yana hizalamak için */
+  justify-content: space-between; /* Aralarında boşluk bırakmak için */
+  align-items: center; /* Dikeyde ortalamak için */
+  max-width: 1200px; /* İsteğe bağlı maksimum genişlik */
+  }
+
+  header .logo {
+  display: flex;
+  align-items: center;
+  }
+
+  header .logo img {
+  height: 100px; /* index.html'deki değerle aynı */
+  margin-right: 40px; /* index.html'deki değerle aynıysa */
+ }
+
+  header .logo h1 {
+  margin: 0;
+  font-size: 1.7em; /* Üniversite adının boyutu */
+  }
+
+  header .header-sag {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Nav ve arama çubuğu arasında boşluk */
+  }
+
+  header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+  margin: 0;
+  }
+
+  header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  display: block;
+  }
+
+  header nav a:hover {
+  background-color: #1e2048; /* Biraz daha açık mavi hover */
+  border-radius: 5px;
+  }
+
+  header .arama-cubugu {
+  display: flex;
+  }
+
+  header .arama-cubugu input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1em;
+  }
+
+  header .arama-cubugu button[type="submit"] {
+  background-color: #7275aa; /* Biraz daha açık mavi arama butonu */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+  }
+
+  header .arama-cubugu button[type="submit"]:hover {
+  background-color: #7275aa; /* Koyu mavi hover */
+  }
+
+  main {
+  padding: 20px 0;
+  }
+
+  h2, h3 {
+  color: #2c3e50; /* Koyu mavi başlıklar */
+  }
+
+  .section {
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  }
+
+  .academic-image {
+  width: 100%;
+  border-radius: 5px;
+  margin: 20px 0;
+  }
+
+  footer {
+  background-color: #1e2048; /* Koyu mavi footer */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  }
+  </style>
+ </head>
+ <body>
+
+  <header>
+  <div class="container">
+  <div class="logo">
+  <a href="index.html"><img src="images/sshtu-logo.jpeg" alt="Üniversite Logosu"></a>
+  <h1>Savunma Sanayi ve Hava Teknolojileri Üniversitesi</h1>
+  </div>
+  <div class="header-sag">
+  <nav>
+  <ul>
+  <li><a href="index.html">Ana Sayfa</a></li>
+  <li><a href="hakkimizda.html">Hakkımızda</a></li>
+  <li class="current"><a href="akademik.html">Akademik</a></li>
+  <li><a href="ogrenci.html">Öğrenci</a></li>
+  <li><a href="iletisim.html">İletişim</a></li>
+  </ul>
+  </nav>
+  <div class="arama-cubugu">
+  <form action="/arama-sonuclari" method="get">
+  <input type="text" placeholder="Sitede Ara..." name="q">
+  <button type="submit">Ara</button>
+  </form>
+  </div>
+  </div>
+  </div>
+  </header>
+
+  <main class="container">
+    
+  <section class="section">
+    <section class="section">
+  <h3>Akademik Takvim</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Tarih</th>
+        <th>Etkinlik</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1 Eylül 2025</td>
+        <td>Yaz Okulu Başlangıcı</td>
+      </tr>
+      <tr>
+        <td>15 Eylül 2025</td>
+        <td>Güz Yarıyılı Başlangıcı</td>
+      </tr>
+      <tr>
+        <td>20 Kasım 2025</td>
+        <td>Son Başvuru Tarihi</td>
+      </tr>
+      <tr>
+        <td>25 Aralık 2025</td>
+        <td>Yarıyıl Tatili Başlangıcı</td>
+      </tr>
+      <tr>
+        <td>10 Ocak 2026</td>
+        <td>Yarıyıl Sonu Sınavları Başlangıcı</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Not: Takvimdeki tarihler, üniversitenin resmi duyurularına göre değişebilir.</p>
+</section>
+
+  <h2>Akademik Yapı</h2>
+  <p>Üniversitemiz, savunma sanayi ve hava teknolojileri alanlarında Türkiye'nin lider akademik kurumlarından biri olmayı hedeflemektedir. Disiplinlerarası yaklaşımımız, yenilikçi araştırma faaliyetlerimiz ve sektörle güçlü iş birliklerimizle öğrencilere eşsiz bir eğitim deneyimi sunuyoruz.</p>
+  <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg" alt="Üniversite Kampüsü" class="academic-image">
+  </section>
+
+  <section class="section">
+  <h3>Fakülteler</h3>
+  <ul>
+  <li>Mühendislik Fakültesi
+  <ul>
+  <li>Hava Araçları Mühendisliği</li>
+  <li>Elektrik-Elektronik Mühendisliği</li>
+  <li>Bilgisayar Mühendisliği</li>
+  <li>Savunma Sistemleri Mühendisliği</li>
+  <li>Mekatronik Mühendisliği</li>
+  </ul>
+  </li>
+  <li>Fen Fakültesi
+  <ul>
+  <li>Fizik</li>
+  <li>Kimya</li>
+  <li>Matematik</li>
+  </ul>
+  </li>
+  </ul>
+  <img src="https://images.pexels.com/photos/256401/pexels-photo-256401.jpeg" alt="Laboratuvar" class="academic-image">
+  </section>
+
+  <section class="section">
+  <h3>Enstitüler</h3>
+  <ul>
+  <li>Havacılık ve Uzay Bilimleri Enstitüsü</li>
+  <li>Lisansüstü Eğitim Enstitüsü</li>
+  <li>Savunma Teknolojileri Araştırma Enstitüsü</li>
+  </ul>
+  <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg" alt="Uzay Teknolojisi" class="academic-image">
+  </section>
+
+  <section class="section">
+    <h3>Araştırma Merkezleri</h3>
+    <ul>
+      <li>Robotik ve Otonom Sistemler Araştırma Merkezi</li>
+      <li>Siber Güvenlik Araştırma Merkezi</li>
+      <li>İleri Malzemeler Araştırma Merkezi</li>
+    </ul>
+    <img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg" alt="Robotik Sistemler" class="academic-image">
+  </section>
+  <section class="section">
+  <h3>Akademik Kadro</h3>
+  <p>Alanlarında uzman akademik kadromuz, uluslararası yayınlar ve projelerle bilime katkı sağlamaktadır. Öğrencilerimiz, teorik bilgiyi uygulamalı çalışmalarla pekiştirerek araştırmacı bir bakış açısıyla mezun olurlar.</p>
+  <ul>
+  <li>Prof. Dr. Ayşe Demir – Bilgisayar Mühendisliği</li>
+  <li>Doç. Dr. Mehmet Kara – Mekatronik</li>
+  <li>Dr. Öğr. Üyesi Elif Yılmaz – Elektrik-Elektronik</li>
+  <li>Dr. Öğr. Üyesi Hasan Şahin – Uzay Sistemleri</li>
+  </ul>
+  </section>
+  </main>
+
+  <footer>
+  <div class="container">
+  <p>&copy; 2025 Savunma Sanayi ve Hava Teknolojileri Üniversitesi. Tüm Hakları Saklıdır.</p>
+  <p>Adres: Üniversite Kampüsü, [Şehir] | E-posta: info@sshtu.edu.tr | Tel: +90 XXX XXX XX XX</p>
+  </div>
+  </footer>
+
+ </body>
+ </html>
