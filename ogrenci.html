@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+ <html lang="tr">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Öğrenci Yaşamı | Savunma Sanayi ve Hava Teknolojileri Üniversitesi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  /* Genel stiller (header için) */
+  body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  }
+
+  .container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  max-width: 1200px; /* İsteğe bağlı maksimum genişlik */
+  }
+
+
+  /* Öğrenci Sayfası Özel CSS (aşağıda kalmaya devam ediyor) */
+  main {
+  padding: 20px 0;
+  }
+
+  .ogrenci-banner {
+  background-color: #e9ecef; /* Açık gri bir arka plan */
+  color: #1e2048; /* Koyu mavi metin */
+  text-align: center;
+  padding: 80px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  }
+
+  .ogrenci-banner h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  }
+
+  .ogrenci-bolum {
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ogrenci-bolum h3 {
+  color: #1e2048;
+  margin-bottom: 15px;
+  }
+
+  .ogrenci-bolum ul {
+  list-style: none;
+  padding-left: 20px;
+  }
+
+  .ogrenci-bolum ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+  }
+
+  .ogrenci-bolum ul li::before {
+  content: "\2022";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 1.2em;
+  }
+
+  .kariyer-merkezi {
+  background-color: #e6f7ff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .kariyer-merkezi h3 {
+  color: #1e2048;
+  margin-bottom: 15px;
+  }
+
+  .kariyer-merkezi p {
+  line-height: 1.8;
+  color: #555;
+  }
+
+  footer {
+  background-color: #1e2048; /* Koyu mavi footer */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  }
+
+  footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+
+  footer .iletisim {
+  text-align: right;
+  }
+
+  footer p {
+  margin: 5px 0;
+  }
+  </style>
+ </head>
+ <body>
+  <header>
+  <div class="container">
+  <div class="logo">
+  <a href="index.html"><img class="logo-img" src="images/sshtu-logo.jpeg" alt="Üniversite Logosu"></a>
+  <h1>Savunma Sanayi ve Hava Teknolojileri Üniversitesi</h1>
+  </div>
+  <div class="header-sag">
+  <nav>
+  <ul>
+  <li><a href="index.html">Ana Sayfa</a></li>
+  <li><a href="hakkimizda.html">Hakkımızda</a></li>
+  <li><a href="akademik.html">Akademik</a></li>
+  <li class="current"><a href="ogrenci.html">Öğrenci</a></li>
+  <li><a href="iletisim.html">İletişim</a></li>
+  </ul>
+  </nav>
+  <div class="arama-cubugu">
+  <form action="/arama-sonuclari" method="get">
+  <input type="text" placeholder="Sitede Ara..." name="q">
+  <button type="submit">Ara</button>
+  </form>
+  </div>
+  </div>
+  </div>
+  </header>
+
+  <main class="container">
+  <section class="ogrenci-banner">
+  <h2>Öğrenci Yaşamı</h2>
+  <p>Kampüsümüzde sosyal, kültürel ve akademik hayatı keşfedin.</p>
+  </section>
+
+  <section class="ogrenci-bolum">
+  <h3>Öğrenci İşleri</h3>
+  <ul>
+  <li>Kayıt ve Kabul İşlemleri</li>
+  <li>Öğrenci Belgesi ve Transkript</li>
+  <li>Burs Olanakları</li>
+  <li>Yurt ve Konaklama</li>
+  <li>Öğrenci Danışmanlığı</li>
+  </ul>
+  </section>
+
+  <section class="ogrenci-bolum">
+  <h3>Öğrenci Kulüpleri</h3>
+  <ul>
+  <li>Havacılık ve Uzay Kulübü</li>
+  <li>Robotik ve Otomasyon Kulübü</li>
+  <li>Savunma Teknolojileri Kulübü</li>
+  <li>Yapay Zeka ve Yazılım Kulübü</li>
+  <li>Kariyer ve Gelişim Kulübü</li>
+  </ul>
+  </section>
+
+  <section class="ogrenci-bolum">
+  <h3>Etkinlikler</h3>
+  <ul>
+  <li>Seminer ve Konferanslar</li>
+  <li>Teknik Geziler</li>
+  <li>Sosyal ve Kültürel Etkinlikler</li>
+  <li>Spor Etkinlikleri</li>
+  </ul>
+  </section>
+
+  <section class="kariyer-merkezi">
+  <h3>Kariyer Merkezi</h3>
+  <p>Kariyer merkezimiz, öğrencilerimizin staj ve iş imkanlarına ulaşmaları için destek sağlamaktadır. Sektördeki önde gelen firmalarla işbirliği yaparak öğrencilerimizin kariyerlerine doğru adımlarla başlamalarına yardımcı oluyoruz.</p>
+  </section>
+  </main>
+
+  <footer>
+  <div class="container">
+  <p>&copy; 2025 Savunma Sanayi ve Hava Teknolojileri Üniversitesi. Tüm Hakları Saklıdır.</p>
+  <div class="iletisim">
+  <p>Adres: Üniversite Kampüsü, [Şehir]</p>
+  <p>E-posta: info@sshtu.edu.tr</p>
+  <p>Telefon: +90 XXX XXX XX XX</p>
+  </div>
+  </div>
+  </footer>
+ </body>
+ </html>
